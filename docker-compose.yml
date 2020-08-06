@@ -1,0 +1,17 @@
+version: '3.4'
+
+services:
+  mvcdocker:
+    image: ${DOCKER_REGISTRY-}mvcdocker
+    build:
+      context: .
+      dockerfile: MVCDocker/Dockerfile
+  database:
+    build:
+      context: .
+      dockerfile: Database/Dockerfile
+    environment:
+      SA_PASSWORD: "Buster0524"
+      ACCEPT_EULA: "Y"
+    ports:
+      - "1433:1433"

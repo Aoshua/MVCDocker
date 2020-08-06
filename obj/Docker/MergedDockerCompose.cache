@@ -1,0 +1,26 @@
+services:
+  database:
+    build:
+      context: D:\Users\Josh\Respositories\MVCDocker
+      dockerfile: Database/Dockerfile
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: Buster0524
+    ports:
+    - published: 1433
+      target: 1433
+  mvcdocker:
+    build:
+      context: D:\Users\Josh\Respositories\MVCDocker
+      dockerfile: MVCDocker/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: https://+:443;http://+:80
+    image: mvcdocker
+    ports:
+    - target: 80
+    - target: 443
+    volumes:
+    - C:\Users\Josh Abbott\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+    - C:\Users\Josh Abbott\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+version: '3.4'

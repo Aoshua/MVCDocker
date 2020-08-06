@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "i8CbvnWpumxru9cGNcY36pV+vUAtKg7a/qRbAiNnx7CNWnW+vA+nMGJhZFdpvxgHuthUh1d+IeibYvxd21GAww==",
+  "success": true,
+  "projectFilePath": "D:\\Users\\Josh\\Respositories\\MVCDocker\\MVCDocker\\MVCDocker.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Josh Abbott\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.10.9\\microsoft.visualstudio.azure.containers.tools.targets.1.10.9.nupkg.sha512"
+  ],
+  "logs": []
+}
