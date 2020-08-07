@@ -1,6 +1,25 @@
-﻿@{
-    ViewData["Title"] = "Privacy Policy";
+﻿@model List<MVCDocker.Models.Planets> 
+@{
+    ViewData["Title"] = "Our Solar System";
 }
 <h1>@ViewData["Title"]</h1>
 
-<p>Use this page to detail your site's privacy policy.</p>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Number from Sun</th>
+            <th scope="col">Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var planet in Model)
+        {
+            <tr>
+                <td>@planet.Id</td>
+                <td>@planet.Name</td>
+            </tr>
+        }
+    </tbody>
+</table>
