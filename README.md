@@ -1,4 +1,5 @@
-I am attempting to integrate Docker with a .Net Core MVC project within a Visual Studio environment as seamlessly as possible.
+## Purpose:
+The repo is a playground for me to practice integrating Docker with a .Net Core MVC project within a Visual Studio environment as seamlessly as possible.
 
 ## Set-Up:
 1. Make MVC Project with Docker Support
