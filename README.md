@@ -1,14 +1,17 @@
 I am attempting to integrate Docker with a .Net Core MVC project within a Visual Studio environment as seamlessly as possible.
 
-## Quick Run-Down:
+## Set-Up:
 1. Make MVC Project with Docker Support
-2. Ensure that NuGet Packages install correctly
-3. Right click project, select -> add -> Container Orchestrator Support
-4. Add database service to services in docker-compose.yml
-![Database Service](images/database_service.PNG)
-5. Set up context (file and in startup)
-6. Add connection string to appsettings.json (the server is the name of your DB container)
-![Connection String](images/connection_string.PNG)
+1. Ensure that NuGet Packages install correctly
+1. Right click project, select -> add -> Container Orchestrator Support
+1. Add database service to services in docker-compose.yml
+   1. On line 9 I set the name of the service
+   1. Line 13 shows where to look for the Dockerfile which contains more specific information to create the MVCDocker_DB container.
+   1. ![Database Service](https://github.com/Aoshua/MVCDocker/blob/master/images/database_service.png)
+1. Set up context (file and in startup)
+1. Add connection string to appsettings.json (the server is the name of your DB container)
+   1. Note that the server name matches the container name.
+   1. ![Connection String](https://github.com/Aoshua/MVCDocker/blob/master/images/connection_string.png)
 
 ## Notes:
 - Simply closing the program, running `docker-compose down`, or stopping the containers does not loose the data added to the database. But running `docker system prune` does.
