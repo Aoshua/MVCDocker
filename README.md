@@ -20,3 +20,7 @@ The repo is a playground for me to practice integrating Docker with a .Net Core 
 - To explore a container: `docker exec -it [container_name] bash`
 - To create a backup database file in a docker container: `docker exec -it MVCDocker_DB /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P "Buster0524" -Q "BACKUP DATABASE [db_name] TO DISK =  N'/var/opt/mssql/backup/[backup_file_name]' WITH NOFORMAT, NOINIT, NAME = '[db_name]', SKIP, NOREWIND, NOUNLOAD, STATS = 10"`
 - To restore a database in a docker container: `docker exec -it MVCDocker_DB /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P "Buster0524" -Q "RESTORE FILELISTONLY FROM DISK = '/var/opt/mssql/backup/Mvc_Docker_Db.bak'"`
+
+### References:
+- [Microsoft: Restore SQL Server Backup in Container](https://docs.microsoft.com/en-us/sql/linux/tutorial-restore-backup-in-sql-server-container?view=sql-server-ver15)
+- [Microsoft: ASP.NET + Docker Container](https://docs.microsoft.com/en-us/visualstudio/containers/tutorial-multicontainer?view=vs-2019)
