@@ -15,7 +15,6 @@ The repo is a playground for me to practice integrating Docker with a .Net Core 
    1. ![Connection String](https://github.com/Aoshua/MVCDocker/blob/master/images/connection_string.png)
 
 ## Notes:
-- This is actually all pretty lame when your data source is in a container because you cannot set breakpoints if you only run the docker-compose file and if you run both, the MVCDocker project still doesn't connect with the DB in the docker container...
 - Simply closing the program, running `docker-compose down`, or stopping the containers does not loose the data added to the database. But running `docker system prune` does.
 - Obviously pulling down this project will not pull down any new information I add to the database. To get new info added, one would need to get on the server and create a new backup file then replace the backup file in the Database directory (with the same name).
 - To explore a container: `docker exec -it [container_name] bash`
