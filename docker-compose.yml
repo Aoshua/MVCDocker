@@ -12,7 +12,7 @@ services:
       context: .
       dockerfile: Database/Dockerfile
     environment:
-      SA_PASSWORD: "Buster0524"
+      SA_PASSWORD: "101MyPass101"
       ACCEPT_EULA: "Y"
     ports:
       - "1433:1433"
