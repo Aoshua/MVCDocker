@@ -13,6 +13,7 @@ The repo is a playground for me to practice integrating Docker with a .Net Core 
 1. Add connection string to appsettings.json (the server is the name of your DB container)
    1. Note that the server name matches the container name.
    1. ![Connection String](https://github.com/Aoshua/MVCDocker/blob/master/images/connection_string.png)
+1. Compile and run the "docker-compose" project. It should include debugging.
 
 ## Notes:
 - Simply closing the program, running `docker-compose down`, or stopping the containers does not loose the data added to the database. But running `docker system prune` does.
